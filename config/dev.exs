@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :pickyBeardPEMVC, PickyBeardPEMVC.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "chrisanderson",
+  # password: "postgres",
   database: "pickybeardpemvc_dev",
   hostname: "localhost",
   pool_size: 10
