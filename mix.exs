@@ -19,7 +19,7 @@ defmodule PickyBeardPEMVC.Mixfile do
   def application do
     [mod: {PickyBeardPEMVC, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :ueberauth, :ueberauth_google, :ueberauth_facebook]]
   end
 
   # Specifies which paths to compile per environment.
@@ -37,7 +37,11 @@ defmodule PickyBeardPEMVC.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:ueberauth, "~> 0.4"},
+     {:ueberauth_google, "~> 0.4"},
+     {:ueberauth_facebook, "~> 0.5"}
+    ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
