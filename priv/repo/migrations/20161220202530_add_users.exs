@@ -4,7 +4,7 @@ defmodule PickyBeardPEMVC.Repo.Migrations.AddUsers do
   def change do
     create table(:users) do
       add :email, :string
-      add :name, :string,
+      add :name, :string
       add :provider, :string
       add :token, :string
 
