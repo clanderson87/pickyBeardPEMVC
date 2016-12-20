@@ -4,7 +4,7 @@ defmodule PickyBeardPEMVC.Group do
   schema "groups" do
     field :name, :string
     many_to_many :members, PickyBeardPEMVC.User, join_through: "user_id"
-    #many_to_many :admins, PickyBeardPEMVC.User, join_through: "admin_of"
+    many_to_many :admins, PickyBeardPEMVC.User, join_through: "admin_of"
   end
 
   def changeset(struct, params \\%{}) do

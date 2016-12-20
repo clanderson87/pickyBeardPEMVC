@@ -7,7 +7,7 @@ defmodule PickyBeardPEMVC.User do
     field :provider, :string
     field :token, :string
     many_to_many :member_of, PickyBeardPEMVC.Group, join_through: "group_id"
-    #many_to_many :admin_of, PickyBeardPEMVC.Group, join_though: "admins"
+    many_to_many :admin_of, PickyBeardPEMVC.Group, join_through: "admins"
 
     timestamps()
   end
