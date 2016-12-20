@@ -8,6 +8,7 @@ defmodule PickyBeardPEMVC.User do
     field :token, :string
     many_to_many :member_of, PickyBeardPEMVC.Group, join_through: "group_id"
     many_to_many :admin_of, PickyBeardPEMVC.Group, join_through: "admins"
+    many_to_many :favorites, PickyBeardPEMVC.Place, join_through: "fans"
 
     timestamps()
   end
