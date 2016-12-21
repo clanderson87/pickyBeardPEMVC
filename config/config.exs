@@ -28,7 +28,8 @@ import_config "#{Mix.env}.exs"
 
 config :ueberauth, Ueberauth,
   providers: [
-    facebook: {Ueberauth.Strategy.Facebook, [default_scope: "email,public_profile"]},
+    facebook: {Ueberauth.Strategy.Facebook, [default_scope: "email,public_profile",
+    profile_fields: "email"]},
     google: {Ueberauth.Strategy.Google, []}
   ]
 
