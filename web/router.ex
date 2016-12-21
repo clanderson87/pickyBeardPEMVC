@@ -19,7 +19,7 @@ defmodule PickyBeardPEMVC.Router do
     get "/", PageController, :index
   end
 
-  scope "/auth/", AuthController do
+  scope "/auth/", PickyBeardPEMVC do
     pipe_through :browser
 
     get "/signout", AuthController, :signout

@@ -20,7 +20,7 @@ defmodule PickyBeardPEMVC.AuthController do
         |> redirect(to: page_path(conn, :index)) ## update with correct path in future
       {:error, _reason} ->
         conn
-        |> put_flash(:error, "sumthin bad happened :("))
+        |> put_flash(:error, "sumthin bad happened :(")
         |> redirect(to: page_path(conn, :index)) ## update with correct path in future
     end
   end
