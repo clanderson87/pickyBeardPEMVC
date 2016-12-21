@@ -5,7 +5,6 @@ defmodule PickyBeardPEMVC.AuthController do
   alias PickyBeardPEMVC.User
 
   def callback(%{assigns: %{ueberauth_auth: auth}} = conn, params) do
-    #need to case over this for facebook, google
     IO.inspect(auth)
     user_params = %{token: auth.credentials.token, email: auth.info.email, provider: Atom.to_string(auth.provider), name: auth.info.name}
     changeset = User.changeset(%User{}, user_params)
@@ -21,7 +20,7 @@ defmodule PickyBeardPEMVC.AuthController do
         |> put_session(:user_id, user.id)
         |> redirect(to: page_path(conn, :index)) ## update with correct path in future
       {:error, reason} ->
-        # IO.inspect(reason)
+        IO.inspect(reason)
         conn
         |> put_flash(:error, "sumthin bad happened :(")
         |> redirect(to: page_path(conn, :index)) ## update with correct path in future
